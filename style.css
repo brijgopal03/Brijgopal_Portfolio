@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,7 +10,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 nav {
@@ -46,9 +48,12 @@ nav ul li a:hover {
 
 span {
     color: rgb(145, 105, 209);
-   
+
 }
-.text-gray{color: grey; }
+
+.text-gray {
+    color: grey;
+}
 
 main hr {
     border: 1px solid rgb(136, 136, 199);
@@ -60,7 +65,7 @@ main hr {
     justify-content: space-around;
     align-items: center;
     margin: 80px 0;
-    background-image: radial-gradient(circle at bottom ,rgb(150, 133, 190)  4%, rgb(9, 9, 54) 56%);
+    background-image: radial-gradient(circle at bottom, rgb(150, 133, 190) 4%, rgb(9, 9, 54) 56%);
 }
 
 .firstSection>div {
@@ -80,17 +85,18 @@ main hr {
     width: 80%;
 }
 
-.secondSection{
+.secondSection {
     max-width: 80vw;
     margin: auto;
     height: 120vh;
 }
-.secondSection h1{
-   font-size: 1.9rem; 
-   
+
+.secondSection h1 {
+    font-size: 1.9rem;
+
 }
 
-.secondSection .box{
+.secondSection .box {
     width: 80vw;
     height: 3px;
     background-color: white;
@@ -99,52 +105,122 @@ main hr {
     justify-content: space-around;
 }
 
-.secondSection .vertical{
+.secondSection .vertical {
     height: 98px;
     width: 3px;
     background-color: white;
     display: flex;
     flex-direction: column;
-  
+
 }
 
-.secondSection .vertical-title{
-    
+.secondSection .vertical-title {
+
     position: relative;
     top: 100px;
-    
+
     width: 150px;
-    
+
 }
 
-.secondSection .vertical-desc{
+.secondSection .vertical-desc {
     position: relative;
     top: 120px;
-    
+    color: grey;
     width: 250px;
 }
 
 
 
-#resp{
+#resp {
     margin: 337px 0 0 0;
 }
-footer{
+
+footer {
     background-color: rgb(34, 33, 85);
     height: auto;
 }
-.footer{
-   
+
+.footer {
+
     padding: 40px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.footer ul{
+.footer ul {
     list-style: none;
 }
-footer .footer-rights{
+
+footer .footer-rights {
     text-align: center;
     color: grey;
     padding: 15px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .box {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstSection .leftSection {
+        padding: 0;
+    }
+
+    .firstSection>div {
+        width: 75%;
+    }
+
+    .rightSection img {
+        width: 100%;
+    }
+
+
+    .secondSection .vertical {
+        height: unset;
+        position: relative;
+        left: 30%;
+    }
+
+    .secondSection .vertical-title {
+        top: 15px;
+        width: 100vw;
+    }
+
+    .secondSection .vertical-desc {
+        margin: 0px 0 35px 0px;
+        top: 20px;
+    }
+
+    .secondSection {
+        height: 170vh;
+    }
+
+    .vertical-desc,
+    .vertical-title {
+        left: 45px;
+
+    }
+
+    #resp {
+        margin: 710px 0 0 0;
+    }
+
+    body {
+        min-width: fit-content;
+    }
 }
